@@ -3,17 +3,38 @@
 <html>
 
 <head>
-    <title>
-
-    </title>
+    <title>Playground cause im fucking lazy</title>
 </head>
 
 <body>
+
+    <p id="demo"></p>
 
 </body>
 
 <script>
 
+   const arrayNum = [1, 2, 3, 4, 5];
+
+    function challengeFunction(arrayNum){
+
+        let sum = 0, avg = 0;
+
+        for(let i in arrayNum){
+            sum += arrayNum[i];
+        }
+
+        avg = sum / arrayNum.length;
+
+        return `the sum is ${sum} and the average is ${avg}`;
+    }
+
+    console.log(challengeFunction(arrayNum));
+
+    let message = challengeFunction(arrayNum);
+
+    document.getElementById("demo").innerHTML = message;
+    
 </script>
 
 </html>

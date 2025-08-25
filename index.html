@@ -14,26 +14,96 @@
 
 <script>
 
-   const arrayNum = [1, 2, 3, 4, 5];
+//    const arrayNum = [1, 2, 3, 4, 5];
 
-    function challengeFunction(arrayNum){
+//     function challengeFunction(arrayNum){
 
-        let sum = 0, avg = 0;
+//         let sum = 0, avg = 0;
 
-        for(let i in arrayNum){
-            sum += arrayNum[i];
-        }
+//         for(let i in arrayNum){
+//             sum += arrayNum[i];
+//         }
 
-        avg = sum / arrayNum.length;
+//         avg = sum / arrayNum.length;
 
-        return `the sum is ${sum} and the average is ${avg}`;
-    }
+//         return `the sum is ${sum} and the average is ${avg}`;
+//     }
 
-    console.log(challengeFunction(arrayNum));
+    // console.log(challengeFunction(arrayNum));
 
-    let message = challengeFunction(arrayNum);
+    // let message = challengeFunction(arrayNum);
 
+    // document.getElementById("demo").innerHTML = message;
+
+    // const mapArr = [1, 2, 3, 4, 5];
+    // const modifiedMapArr = mapArr.map(num => num * 2);
+    // console.log(modifiedMapArr);
+
+    // const filterArr = [1, 2, 3, 4, 5];
+    // const modifiedFilterArr = filterArr.filter(num => num % 2 == 0);
+    // console.log(modifiedFilterArr);
+
+    // let message = "";
+
+    // for(let i of modifiedFilterArr){
+    //     message += i + "<br>";
+    // }
+
+    // message = `${message}`;
+   
+    // document.getElementById("demo").innerHTML = message;
+
+    // const arrReduce = [1, 2, 3, 4, 5];
+    // const modifiedArrReduce = arrReduce.reduce((acc, curr) => acc + curr, 0);
+
+    // const objMovies = [
+
+    //     {title: "Movie1", rating: 4},
+    //     {title: "movie2", rating: 9},
+    //     {title: "Movie3", rating: 8.4},
+    //     {title: "Movie4", rating: 9.6},
+    //     {title: "movie5", rating: 8.1}
+
+    // ];
+
+    const objMovies = [
+
+    { title: "Movie1", rating: 4, genre: "Action" },
+    { title: "movie2", rating: 9, genre: "Comedy" },
+    { title: "Movie3", rating: 8.4, genre: "Action" },
+    { title: "Movie4", rating: 9.6, genre: "Drama" },
+    { title: "movie5", rating: 8.1, genre: "Comedy" }
+
+    ];
+    
+    const {title: firstTitle, rating: firstRating} = objMovies[0];
+
+    let title = firstTitle;
+    let rating = firstRating;
+
+    const ratingIncreased = objMovies.map(movie => movie.rating + 0.5);
+    const filterActionMovies = objMovies.filter(movie => movie.genre.toLowerCase() == "action");
+    const uppercaseActionMovies = filterActionMovies.map(movie => movie.title.toUpperCase());
+    const avgMovies = ratingIncreased.reduce((acc, curr) => acc + curr / ratingIncreased.length, 0);
+
+    
+
+    
+    // const filterMovie = objMovies.filter(movie => movie.rating >= 8);
+    // const mapMovie = filterMovie.map(movie => movie.title.toUpperCase());
+    // const reduceMovie = filterMovie.reduce((count) => count + 1, 0);
+    
+    let message = "";
+   
+    // message = `Filtered movie titles: ${mapMovie.join(", ")} Movie count: ${reduceMovie}`;
+
+    message = `Task 1 = Destructured variables: ${title} and ${rating}`;
+    message = message + "<br>" + `Task 2 = ${ratingIncreased}`;
+    message = message + "<br>" + `Task 3 = ${filterActionMovies.map(m => m.title).join(", ")}`;
+    message = message + "<br>" + `Task 4 = ${uppercaseActionMovies}`;
+    message = message + "<br>" + `Task 5 = ${avgMovies}`;
     document.getElementById("demo").innerHTML = message;
+
     
 </script>
 

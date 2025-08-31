@@ -1,0 +1,28 @@
+const form = document.getElementById("form_id")
+const output = document.getElementById("output")
+
+
+
+form.addEventListener("submit", (event) => {
+
+
+    event.preventDefault();
+
+    const name = document.getElementById("name_id").value.trim()
+    const email = document.getElementById("email_id").value.trim()
+
+    if(name === "" || email === ""){
+        alert("Input empty fields!")
+        return
+    }
+
+    const p_msg = document.createElement("p")
+    p_msg.textContent = `${name}, your email is ${email}`
+    
+    output.append(p_msg)
+    
+
+
+
+})
+

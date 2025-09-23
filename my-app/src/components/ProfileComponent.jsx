@@ -13,4 +13,4 @@ function ProfileComponent(props){
 
 }
 
-export default ProfileComponent
+export default ProfileComponent 

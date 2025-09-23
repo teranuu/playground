@@ -3,7 +3,8 @@ import ListGroup from "./ListGroup";
 import UseStateComponent from "./UseStateComponent";
 import ProfileComponent from "./ProfileComponent";
 
-
+import SampleComponent from './SampleComponent'
+import SampleComponent2 from "./SampleComponent2.jsx";
 
 function ProfileApp(){
 
@@ -13,11 +14,16 @@ function ProfileApp(){
   return (
     <>
       
-      <ProfileComponent name="Denn" age={21} hobby="gaming"/>
+      {/* <ProfileComponent name="Denn" age={21} hobby="gaming"/>
       <UseStateComponent/>
       <ListGroup/>
-      <ConditionalRendering isAdult={true}/>
+      <ConditionalRendering isAdult={true}/> */}
+
+      <SampleComponent/>
+      <SampleComponent2/>
     </>
+
+
 
   );
 
